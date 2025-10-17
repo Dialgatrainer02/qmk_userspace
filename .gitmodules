@@ -1,0 +1,3 @@
+[submodule "modules/stephen_ostermiller"]
+	path = modules/stephen_ostermiller
+	url = https://github.com/stephenostermiller/qmk_modules.git
