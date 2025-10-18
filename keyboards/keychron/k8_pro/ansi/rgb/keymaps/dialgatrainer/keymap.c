@@ -31,6 +31,11 @@ enum custom_keycodes {
     STP_ESC
 };
 
+// socd_cleaner_t socd_opposing_pairs[] = {
+//   {{KC_W, KC_S}, SOCD_CLEANER_LAST},
+//   {{KC_A, KC_D}, SOCD_CLEANER_LAST},
+// };
+
 
 //**************** SOME GLOBALS *********************//
 
@@ -113,12 +118,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
                 bool isShifted = get_mods() & MOD_MASK_SHIFT;
                 if (isRecording && !isShifted) {
-                    // Send that the A key was pressed
-                    process_keycode_any(KC_A, true);
-                    // Add a delay between press and release
-                    wait_ms(10);
-                    // Send that the A key was released
-                    process_keycode_any(KC_A, false);
+
                 } else {
                     register_code(KC_ESC);
                 }
